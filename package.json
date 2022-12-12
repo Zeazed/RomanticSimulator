@@ -1,0 +1,48 @@
+{
+  "name": "Romantic Simulator",
+  "version": "0.0.1",
+  "description": "DESCRIPTION",
+  "main": "dist/src/main.js",
+  "bin": {
+    "COMMAND": "dist/src/main.js"
+  },
+  "directories": {
+    "test": "test",
+    "doc": "doc",
+    "dist": "dist"
+  },
+  "scripts": {
+    "setup": "npm set registry http://htsit.se:4873",
+    "run": "node dist/main.js",
+    "test": "mocha dist/test/ --reporter spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "doc": "typedoc src",
+    "fmt": "prettier -w --prose-wrap always --ignore-unknown *",
+    "publish:self": "npm run build && npm run test && npm publish --registry http://htsit.se:4873"
+  },
+  "repository": {
+    "type": "git",
+    "url": "GIT_PATH"
+  },
+  "bugs": {
+    "url": "ISSUES_URL"
+  },
+  "author": "AUTHOR",
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^10.0.0",
+    "chai": "^4.3.4",
+    "deep-eql": "^4.1.1",
+    "mocha": "^10.1.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.18",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/colors": "*",
+    "colors": "^1.4.0",
+    "promise-prompt": "^1.1.1"
+  }
+}
