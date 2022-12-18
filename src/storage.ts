@@ -2,42 +2,49 @@
 import Intrests from '../data/RomancesData.json'
 import prompt from 'promise-prompt';
 import colors from 'colors';
- 
-export async function main()  {
-    console.log(" Welcome to the Main Menu of the brand new HTS Romantic Simulator! \nChoose a number that represents your choice: \n1. Start a new game \n2. How to play\n3. Credits\n4. Exit")
-    var userchoice = prompt("")
-    userchoice.then((userchoice:string)=>{
-    if(userchoice === "1"){
-        startnewgame()
-    } else if(userchoice === "2"){
-        howtoplay()
-    } else if(userchoice === "3"){
-        console.log("Coming soon!")
-    } else if (userchoice === "4"){
-        console.log("Thanks for playing!")
-        process.exit()
-    } else {
-        console.log("Invalid choice!\n \n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n") 
-        main()
-    }
-    
-}) }
+import * as gfunction from './main'
+
+
 
 export async function startnewgame() {
-    const name = prompt("What is your name? ");
+    const name = prompt("\n\n\n\n\n\nWhat is your name? ");
     name.then((name:string)=> {
-      console.log("Hello "+colors.bold.red(name)+"!")
+      console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello "+colors.rainbow(name)+"!" +" and welcome to the amazing world of 'Romantic Simulator' \n\n Pick the first girl you want to talk to! \n\n 1. Summer Girl Larissa\n\n 2. Party Gurl Erica \n\n 3. Inside Girl Sandra")
+      var userchoice = (prompt("")) 
+      userchoice.then((userchoice:string)=>{
+      if(userchoice === "1"){
+      gfunction.SmrGrl()
+    } else if(userchoice === "2"){
+        gfunction.PrtyGrl()
+      } else if(userchoice === "3"){
+        gfunction.InsGrl()
+      }
+    })
    })
   }
   
+export function quit(){
+    console.log("\n\n\n\n\n\n\n\n Thanks for playing!!!")
+    process.exit()
+}
 
-function howtoplay() {
-    console.log("Coming soon!")
+export function ending(){
+    console.log("Congratulations! You have won the game")
+}
+
+export function howtoplay() {
+    console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou choose a girl and talk to her! After you talk with her enough times, who knows what will happen :)")
+    gfunction.main()
 }
 
 export function tesasdt(){
 console.log(Intrests[1].Name) 
 
+}
+
+export function credits(){
+    console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMade by Zeazed 2022")
+    gfunction.main()
 }
 
 

@@ -11,18 +11,7 @@ $ npm install
 
 ## Usage
 
-Run "npm run run" to make the game run.
-
-## API
-
-
-
-### Functions
-
-
-
-### Class
-
+Run "node ." to make the game run.
 
 
 ## License
@@ -35,7 +24,7 @@ Please feel free to open an issue or submit a pull request.
 
 ## Changelog
 
- * **0.0.1** *{{year}}-??-??* First version published
+ * **0.0.1** *{{2022}}-12-?18* First version published
 
 ## Author
 

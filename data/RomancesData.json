@@ -3,18 +3,18 @@
         "Name": "Larissa",
         "Age":  22,
         "Likes": "Long walks on the beach, Summer, Tanning",
-        "RomanticCompatibility": 0
+        "LRomanticCompatibility": 0
     },
     {
         "Name": "Erica",
         "Age":  20,
         "Likes": "Partying, Drinking, Having Fun",
-        "RomanticCompatibility": 0
+        "ERomanticCompatibility": 0
     },
     {
         "Name": "Sandra",
         "Age":  25,
         "Likes": "Watching Movies, Eating Snacks, Being Home",
-        "RomanticCompatibility": 0
+        "SRomanticCompatibility": 0
     }
 ]
